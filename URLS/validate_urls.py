@@ -5,7 +5,7 @@ def valid(url):
     try:
         result = urlparse(url)
         return all([result.scheme, result.netloc])
-    except AttributeError:
+    except Exception:
         return False
 
 def main():
